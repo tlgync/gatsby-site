@@ -1,0 +1,121 @@
+$font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+//colors
+$white: #fff;
+$black: #000;
+$maroon: #83333e;
+$off-white: #f2f4f5;
+
+html,
+body{
+    font-family: $font;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 1640px;
+    min-width: 1640px;
+    margin: 0 auto;
+    @media(max-width: 1440px){
+        width: 1280px;
+        min-width: 1280px;
+    }
+    @media(max-width: 1280px){
+        width: 976px;
+        min-width: 976px;
+    }
+    @media(max-width: 976px){
+        width: 768px;
+        min-width: 768px;
+    }
+}
+
+//Header
+header{
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    .inner-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        .logo{
+            a{
+                font-weight: 700;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                color: $black;
+                font-size: 1.2rem;
+            }
+            @media(max-width: 836px){
+                display: none;
+            }
+        }
+        
+    }
+}
+
+//Banner
+.banner{
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    position: relative;
+    height: 100vh;
+    .row{
+        position: relative;
+        .main-text{
+            font-size: 5.8rem;
+            text-transform: uppercase;
+            letter-spacing: 42px;
+            font-weight: 700;
+            color: $white;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            mix-blend-mode: difference;
+            z-index: 9;
+            @media(max-width: 1440px){
+                font-size: 4.4rem;
+                letter-spacing: 36px;
+            }
+            @media(max-width: 1280px){
+                font-size: 3rem;
+                letter-spacing: 30px;
+            }
+            @media(max-width: 976px){
+                font-size: 1.6rem;
+                letter-spacing: 24px;
+            }
+        }
+        .main-image{
+            width: 536px;
+            margin: 0 auto;
+            @media(max-width: 1440px){
+                width: 436px;
+            }
+        }
+        .side-image{
+            width: 260px;
+            position: absolute;
+            @media(max-width: 1440px){
+                width: 208px;
+            }
+            &.left{
+                left: 168px;
+                top: 12px;
+            }
+            &.right{
+                right: 168px;
+                bottom: 12px;
+            }
+        }
+
+    }
+}
